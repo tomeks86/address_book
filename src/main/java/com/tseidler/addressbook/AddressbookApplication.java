@@ -1,5 +1,6 @@
 package com.tseidler.addressbook;
 
+import com.tseidler.addressbook.domain.AddressBook;
 import com.tseidler.addressbook.domain.User;
 import com.tseidler.addressbook.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,8 @@ public class AddressbookApplication implements CommandLineRunner {
         userService.addUser(franek_smietana);
         User jerzy_zyleta = new User("Jerzy", "Żyleta", "Bukowa 15", "Radom", "66-321", "1561384681");
         userService.addUser(jerzy_zyleta);
+
+        AddressBook addressBook = new AddressBook();
+        addressBook.setOwner(stefan_beton);
     }
 }
